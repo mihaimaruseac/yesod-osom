@@ -1,0 +1,187 @@
+\documentclass{beamer}
+
+\usepackage{hyperref}
+\mode<presentation>
+
+\title{Yesod :: Haskell $\rightarrow$ Web}
+\author{Mihai Maruseac, ROSEdu\\mihai@rosedu.org}
+
+\setbeamertemplate{frametitle continuation}[from second]
+\setbeamertemplate{footline}[frame number]
+
+%\pgfdeclareimage[height=5cm]{mvst}{img/mvst}
+%\pgfdeclareimage[height=3cm]{pc}{img/pc}
+%\pgfdeclareimage[height=5cm]{s}{img/s}
+%\pgfdeclareimage[height=5cm]{initial}{img/initial}
+%\pgfdeclareimage[height=5cm]{info}{img/info}
+%\pgfdeclareimage[height=5cm]{final}{img/final}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Yesod is...}
+  \begin{itemize}[<+->]
+    \item Haskell web framework
+    \item type-safe
+    \item high performance
+    \item RESTful web application
+  \end{itemize}
+  TODO: Yesod pic
+\end{frame}
+
+\begin{frame}{Why :: Type Safety (1)}
+  TODO: XKCD ref
+\end{frame}
+
+\begin{frame}{Why :: Type Safety (2)}
+  TODO: Amount of string handling is too high
+  \begin{itemize}
+    \item URL, HTML, JavaScript, CSS, SQL, $\ldots$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Why :: Type Safety (3)}
+  TODO: String type transformation
+\end{frame}
+
+\begin{frame}{Compiler is Your Ally}
+  \begin{itemize}[<+->]
+    \item Haskell philosophy
+    \item \textit{If it compiles, it must work properly}
+    \item \textit{Force runtime bugs to be compile-time errors}
+    \item Exploit awesome type system $\ldots$
+    \item $\ldots$ and type inference
+  \end{itemize}
+  TODO: compiler ally pic (TODO find smth)
+\end{frame}
+
+\begin{frame}{Awesome Type System and Type Inference}
+  \begin{itemize}[<+->]
+    \item proper links
+    \item no XSS attacks
+    \item character encoding easy as $\pi e$
+    \item no more \texttt{Robert'); DROP TABLE}
+    \item dodge as many bullets as possible
+  \end{itemize}
+  TODO: Neo picture
+\end{frame}
+
+\begin{frame}{Why :: Asynchronous}
+  \begin{itemize}[<+->]
+    \item Web is async
+    \item Haskell runtime is async
+    \item lightweight green threads
+    \item event-based system calls
+    \item non-blocking code
+    \item async is really easy
+  \end{itemize}
+  TODO: green threads pic
+\end{frame}
+
+\begin{frame}{Why :: Performance}
+  \begin{itemize}[<+->]
+    \item async I/O
+    \item high-performance libraries: \texttt{ByteString},
+    \texttt{iterattees}, $\ldots$
+    \item GHC compiler magic
+    \item C speed has been reached
+  \end{itemize}
+  TODO: pong stats
+\end{frame}
+
+\begin{frame}{Warp Speed Ahead}
+  TODO: ST - TOS pic
+\end{frame}
+
+\begin{frame}{Warp Speed Ahead :: The Real One}
+  \begin{itemize}[<+->]
+    \item \texttt{Warp} - high-performance HTTP library
+    \item Yesod and \texttt{mighty} built on top of it
+    \item \texttt{mighty} on par with \texttt{nginx}
+  \end{itemize}
+  TODO: nginx on par mighty pic
+  TODO: Warp 0.3.2.1 pong stats
+\end{frame}
+
+\begin{frame}{Why :: No boilerplate}
+  \begin{itemize}[<+->]
+    \item templates, routes, database connections, $\ldots$
+    \item boilerplate
+    \item remember DRY principle
+    \item \textit{Can we get rid of it?}
+    \item DSLs = Domain Specific Languages
+    \item compile-time checked for bugs
+  \end{itemize}
+  TODO: boilerplate pic
+\end{frame}
+
+\begin{frame}{Why :: Widgets and Composability}
+  \begin{itemize}[<+->]
+    \item small parts of application
+    \item footer, header, \texttt{Scroll to top} button, $\ldots$
+    \item bits of HTML, CSS, Javascript, $\ldots$
+    \item some in \texttt{<header>...</header>}
+    \item some in \texttt{<body>...</body>}
+    \item compose them nicely
+    \item compile unique and compressed CSS file
+    \item reuse resources
+  \end{itemize}
+  TODO: snippet of composing 3 widgets
+\end{frame}
+
+\begin{frame}{Shakesperean Name Convention}
+  \begin{description}
+    \item[CSS] Cassius and Lucius
+    \item[JavaScript] Julius
+    \item[HTML] Hamlet
+  \end{description}
+  TODO: snippet of a widget
+\end{frame}
+
+\begin{frame}{Why :: Community}
+  \begin{itemize}
+    \item TODO
+  \end{itemize}
+  TODO: community pic
+\end{frame}
+
+\begin{frame}{Why :: Other reasons}
+  \begin{itemize}
+    \item incredible development speed
+    \item many Haskell advances come from Yesod developers
+    \item scaffolding: \texttt{yesod init} and \texttt{yesod devel} for the
+    first site
+  \end{itemize}
+  TODO: find pic
+\end{frame}
+
+\begin{frame}{Weaknesses}
+  \begin{itemize}
+    \item nontechnical
+    \pause
+    \item hard to understand Haskell
+    \item too few Haskell programmers
+    \item Haskell community smaller than community for other languages
+    \item no \texttt{heroku} yet
+  \end{itemize}
+  TODO: find pic
+\end{frame}
+
+\begin{frame}{Resources}
+  \begin{itemize}
+    \item TODO: hlint
+    \item TODO: hoogle
+    \item TODO: LYAH
+    \item TODO: RWH
+    \item TODO: YesodBook
+    \item TODO: screencasts
+  \end{itemize}
+  TODO: pic of yesod book
+\end{frame}
+
+\begin{frame}{Questions}
+  TODO: Q pic
+\end{frame}
+
+\end{document}
