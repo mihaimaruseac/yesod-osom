@@ -11,6 +11,13 @@
 
 \pgfdeclareimage[height=3cm]{yesod}{img/yesod}
 \pgfdeclareimage[height=3cm]{xkcd}{img/xkcd}
+\pgfdeclareimage[height=5cm]{high}{img/high}
+\pgfdeclareimage[height=2cm]{string}{img/string}
+\pgfdeclareimage[height=2cm]{neo}{img/neo}
+\pgfdeclareimage[height=4cm]{pong}{img/pong}
+\pgfdeclareimage[height=7cm]{sttos}{img/sttos}
+\pgfdeclareimage[height=5cm]{mightynginx}{img/mightynginx}
+\pgfdeclareimage[height=3cm]{boilerplate}{img/boilerplate}
 
 \begin{document}
 
@@ -35,14 +42,17 @@
 \end{frame}
 
 \begin{frame}{Why :: Type Safety (2)}
-  TODO: Amount of string handling is too high
-  \begin{itemize}
-    \item URL, HTML, JavaScript, CSS, SQL, $\ldots$
-  \end{itemize}
+  \begin{center}
+  \pgfuseimage{high}
+  \end{center}
+    URL, HTML, JavaScript, CSS, SQL, $\ldots$
 \end{frame}
 
 \begin{frame}{Why :: Type Safety (3)}
-  TODO: String type transformation
+  \begin{center}
+  \pgfuseimage{string}
+  \end{center}
+  \href{http://yannesposito.com/Scratch/en/blog/Yesod-tutorial-for-newbies/}{yannesposito.com}
 \end{frame}
 
 \begin{frame}{Compiler is Your Ally}
@@ -53,7 +63,6 @@
     \item Exploit awesome type system $\ldots$
     \item $\ldots$ and type inference
   \end{itemize}
-  TODO: compiler ally pic (TODO find smth)
 \end{frame}
 
 \begin{frame}{Awesome Type System and Type Inference}
@@ -64,7 +73,7 @@
     \item no more \texttt{Robert'); DROP TABLE}
     \item dodge as many bullets as possible
   \end{itemize}
-  TODO: Neo picture
+  \only<5>{\begin{center}\pgfuseimage{neo}\end{center}}
 \end{frame}
 
 \begin{frame}{Why :: Asynchronous}
@@ -76,10 +85,10 @@
     \item non-blocking code
     \item async is really easy
   \end{itemize}
-  TODO: green threads pic
 \end{frame}
 
 \begin{frame}{Why :: Performance}
+  \begin{center}\pgfuseimage{pong}\end{center}
   \begin{itemize}[<+->]
     \item async I/O
     \item high-performance libraries: \texttt{ByteString},
@@ -87,11 +96,10 @@
     \item GHC compiler magic
     \item C speed has been reached
   \end{itemize}
-  TODO: pong stats
 \end{frame}
 
 \begin{frame}{Warp Speed Ahead}
-  TODO: ST - TOS pic
+  \begin{center}\pgfuseimage{sttos}\end{center}
 \end{frame}
 
 \begin{frame}{Warp Speed Ahead :: The Real One}
@@ -100,20 +108,19 @@
     \item Yesod and \texttt{mighty} built on top of it
     \item \texttt{mighty} on par with \texttt{nginx}
   \end{itemize}
-  TODO: nginx on par mighty pic
-  TODO: Warp 0.3.2.1 pong stats
+  \only<3>{\begin{center}\pgfuseimage{mightynginx}\end{center}}
 \end{frame}
 
 \begin{frame}{Why :: No boilerplate}
+  \begin{center}\pgfuseimage{boilerplate}\end{center}
+  \pause
   \begin{itemize}[<+->]
     \item templates, routes, database connections, $\ldots$
-    \item boilerplate
     \item remember DRY principle
     \item \textit{Can we get rid of it?}
     \item DSLs = Domain Specific Languages
     \item compile-time checked for bugs
   \end{itemize}
-  TODO: boilerplate pic
 \end{frame}
 
 \begin{frame}{Why :: Widgets and Composability}
@@ -127,23 +134,30 @@
     \item compile unique and compressed CSS file
     \item reuse resources
   \end{itemize}
-  TODO: snippet of composing 3 widgets
+  \only<6->{\texttt{mainWdg = menuWdg >> contentWdg >> footerWdg}}
 \end{frame}
 
-\begin{frame}{Shakesperean Name Convention}
+\begin{frame}[fragile]{Shakesperean Name Convention}
   \begin{description}
     \item[CSS] Cassius and Lucius
     \item[JavaScript] Julius
     \item[HTML] Hamlet
   \end{description}
-  TODO: snippet of a widget
+  \begin{verbatim}
+  toWidgetHeader cassiusFile "button.cassius"
+  toWidgetHeader juliusFile "button.julius"
+  toWidget       hamletFile "buttonTemplate.hamlet"
+  \end{verbatim}
 \end{frame}
 
 \begin{frame}{Why :: Community}
   \begin{itemize}
-    \item TODO
+    \item \href{http://stackoverflow.com/questions/tagged/yesod}{Stack Overflow}
+    \item \href{http://groups.google.com/group/yesodweb}{Yesod Google Group}
+    \item \href{http://www.yesodweb.com/wiki}{Yesod Wiki}
+    \item \href{http://www.reddit.com/r/haskell/}{Haskell Reddit}
+    \item IRC channel: \#yesod on Freenode
   \end{itemize}
-  TODO: community pic
 \end{frame}
 
 \begin{frame}{Why :: Other reasons}
@@ -153,7 +167,6 @@
     \item scaffolding: \texttt{yesod init} and \texttt{yesod devel} for the
     first site
   \end{itemize}
-  TODO: find pic
 \end{frame}
 
 \begin{frame}{Weaknesses}
@@ -165,23 +178,15 @@
     \item Haskell community smaller than community for other languages
     \item no \texttt{heroku} yet
   \end{itemize}
-  TODO: find pic
 \end{frame}
 
 \begin{frame}{Resources}
   \begin{itemize}
-    \item TODO: hlint
-    \item TODO: hoogle
-    \item TODO: LYAH
-    \item TODO: RWH
-    \item TODO: YesodBook
-    \item TODO: screencasts
+    \item \href{http://learnyouahaskell.com/}{Learn You a Haskell}
+    \item \href{http://book.realworldhaskell.org/read/}{Real World Haskell}
+    \item \href{http://www.yesodweb.com/book}{Yesod Book}
+    \item \href{http://www.yesodweb.com/page/screencasts}{Yesod Screencasts}
   \end{itemize}
-  TODO: pic of yesod book
-\end{frame}
-
-\begin{frame}{Questions}
-  TODO: Q pic
 \end{frame}
 
 \end{document}
