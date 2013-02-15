@@ -7,4 +7,6 @@ values.
 
 To obtain the presentation you must have LaTeX installed and run `make`.
 
+The talk was held on 15.02.2013.
+
 [osom]: http://osom.ro/ "OSOM"
